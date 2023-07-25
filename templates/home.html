@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title></title>
+    <style>
+    
+        @keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+.table{
+    margin-left: 25%;
+    margin-right: 25%;
+    background: scroll;
+}
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background: #4e54c8;
+    overflow: hidden;
+}
+.background li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 17s linear infinite;
+}
+
+
+
+
+.background li:nth-child(0) {
+    left: 73%;
+    width: 194px;
+    height: 194px;
+    bottom: -194px;
+    animation-delay: 1s;
+}
+.background li:nth-child(1) {
+    left: 4%;
+    width: 148px;
+    height: 148px;
+    bottom: -148px;
+    animation-delay: 3s;
+}
+.background li:nth-child(2) {
+    left: 79%;
+    width: 182px;
+    height: 182px;
+    bottom: -182px;
+    animation-delay: 8s;
+}
+.background li:nth-child(3) {
+    left: 27%;
+    width: 100px;
+    height: 100px;
+    bottom: -100px;
+    animation-delay: 11s;
+}
+.background li:nth-child(4) {
+    left: 63%;
+    width: 121px;
+    height: 121px;
+    bottom: -121px;
+    animation-delay: 5s;
+}
+.background li:nth-child(5) {
+    left: 61%;
+    width: 142px;
+    height: 142px;
+    bottom: -142px;
+    animation-delay: 3s;
+}
+.background li:nth-child(6) {
+    left: 83%;
+    width: 125px;
+    height: 125px;
+    bottom: -125px;
+    animation-delay: 29s;
+}
+.background li:nth-child(7) {
+    left: 30%;
+    width: 131px;
+    height: 131px;
+    bottom: -131px;
+    animation-delay: 3s;
+}
+.background li:nth-child(8) {
+    left: 41%;
+    width: 140px;
+    height: 140px;
+    bottom: -140px;
+    animation-delay: 22s;
+}
+.background li:nth-child(9) {
+    left: 73%;
+    width: 190px;
+    height: 190px;
+    bottom: -190px;
+    animation-delay: 10s;
+}
+.background li:nth-child(10) {
+    left: 51%;
+    width: 185px;
+    height: 185px;
+    bottom: -185px;
+    animation-delay: 47s;
+}
+.background li:nth-child(11) {
+    left: 9%;
+    width: 115px;
+    height: 115px;
+    bottom: -115px;
+    animation-delay: 24s;
+}
+    </style>
+</head>
+<body>
+    <ul class="background">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    
+    <div style="width: 25%;height: 25%;margin-left:35%; margin-top: 20%;">
+        <form action="my_file" method='POST' enctype="multipart/form-data">
+            {%csrf_token%}
+            <div style="display: grid;">
+                <h1 style="margin-left: 100px;"><label for="formFileLg" class="form-label">Input the file</label></h1>
+                <div style="margin-top: 20px;">
+                    <input style="display:inline-block;" id="formFileLg" type="file" id="myfile"name="myfile">
+                    <button class="btn btn-primary" type="submit">Upload</button>
+                </div>
+                <a href="data_10" style="background-color: rgb(53, 54, 55);text-align: center;color: white;margin-top: 10px;">Get Data</a>
+              </div>
+            <!-- <div>
+                <input type="file" id="myfile" name="myfile">
+                <button type="submit">upload</button>
+            </div> -->
+        </form>  
+    </div>
+    </ul>
+    <!-- <a href="data_10">data</a> -->
+        <!-- <table>
+            <tr>
+                <th>id</th>
+                <th>datetime</th>
+                <th>close</th>
+                <th>high</th>
+                <th>low</th>
+                <th>open</th>
+                <th>volume</th>
+                <th>instrument</th>
+            </tr>
+                {%for i in data1%}
+                    <tr style="width: auto;margin:auto;text-align:center;padding: 20px;">
+                        <td>{{i.id}}</td>
+                        <td>{{i.datetime}}</td>
+                        <td>{{i.close}}</td>
+                        <td>{{i.high}}</td>
+                        <td>{{i.low}}</td>
+                        <td>{{i.open}}</td>
+                        <td>{{i.volume}}</td>
+                        <td>{{i.instrument}}</td>
+                    </tr>
+                {%endfor%} -->
+        </table>
+</body>
+</html>
